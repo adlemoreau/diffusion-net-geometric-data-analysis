@@ -68,6 +68,7 @@ class HumanSegOrigDataset(Dataset):
 
             # ehf
             mesh_dirpath = os.path.join(self.root_dir, "meshes", "test")
+            # mesh_dirpath = os.path.join(self.root_dir, "meshes", "test", "modified_data")
             # label_dirpath = os.path.join(self.root_dir, "segs", "test")
             for fname in os.listdir(mesh_dirpath):
                 mesh_fullpath = os.path.join(mesh_dirpath, fname)

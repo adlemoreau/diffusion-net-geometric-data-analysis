@@ -159,6 +159,7 @@ def test():
     
     correct = 0
     total_num = 0
+    i = 1
     with torch.no_grad():
     
         for data in tqdm(test_loader):
@@ -189,14 +190,18 @@ def test():
 
             # track accuracy
             pred_labels = torch.max(preds, dim=1).indices + 1 # otherwise 0 label
-            
+
+            np.savetxt(f"data/EHF_dataset/segs/test/output_ehf_{i}.txt", pred_labels, delimiter=',', fmt='%d')
+            i+=1
+
     return pred_labels 
 
 
 # Test
 pred_labels = test()
 # print("Overall test accuracy: {:06.3f}%".format(100*test_acc))
-print("pred_labels are", pred_labels)
+# print("pred_labels are", pred_labels)
 
 # Save the NumPy array to a text file
-np.savetxt('data/EHF_dataset/segs/test/output_ehf.txt', pred_labels, delimiter=',', fmt='%d')
+# np.savetxt('data/EHF_dataset/segs/test/modified_data/output_ehf.txt', pred_labels, delimiter=',', fmt='%d')
+# np.savetxt('data/EHF_dataset/segs/test/output_ehf.txt', pred_labels, delimiter=',', fmt='%d')
