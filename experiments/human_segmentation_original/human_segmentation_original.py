@@ -21,7 +21,8 @@ args = parser.parse_args()
 
 
 # system things
-device = torch.device('cuda:0')
+# device = torch.device('cuda:0')
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 dtype = torch.float32
 
 # problem/dataset things
@@ -80,7 +81,7 @@ model = model.to(device)
 if not train:
     # load the pretrained model
     print("Loading pretrained model from: " + str(pretrain_path))
-    model.load_state_dict(torch.load(pretrain_path))
+    model.load_state_dict(torch.load(pretrain_path, map_location=device))
 
 
 # === Optimize

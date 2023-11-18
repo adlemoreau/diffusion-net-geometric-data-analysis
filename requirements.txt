@@ -1,0 +1,17 @@
+filelock==3.13.1
+fsspec==2023.10.0
+Jinja2==3.1.2
+joblib==1.3.2
+MarkupSafe==2.1.3
+mpmath==1.3.0
+networkx==3.2.1
+numpy==1.26.2
+potpourri3d==1.0.0
+robust-laplacian==0.2.7
+scikit-learn==1.3.2
+scipy==1.11.3
+sympy==1.12
+threadpoolctl==3.2.0
+torch==2.1.1
+tqdm==4.66.1
+typing_extensions==4.8.0
