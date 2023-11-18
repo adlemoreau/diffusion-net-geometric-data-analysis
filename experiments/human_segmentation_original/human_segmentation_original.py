@@ -195,7 +195,7 @@ def test():
             total_num += this_num
 
     test_acc = correct / total_num
-    return test_acc 
+    return test_acc
 
 
 if train:
@@ -213,3 +213,4 @@ if train:
 # Test
 test_acc = test()
 print("Overall test accuracy: {:06.3f}%".format(100*test_acc))
+print()
