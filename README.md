@@ -1,3 +1,10 @@
+This study is part of a project for the course "Geometric Data Analysis" in the master MVA, at ENS Paris-Saclay.
+
+The goal is to implement, experiment in Python and extend some parts of the **DiffusionNet: Discretization Agnostic Learning on Surfaces** paper from Nicholas Sharp, Souhaib Attaiki, Keenan Crane, and Maks Ovsjanikov.
+
+
+Here is the description of the original project:
+
 **DiffusionNet** is a general-purpose method for deep learning on surfaces such as 3D triangle meshes and point clouds. It is well-suited for tasks like segmentation, classification, feature extraction, etc.
 
 Why try DiffusionNet?
